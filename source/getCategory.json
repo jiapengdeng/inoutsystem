@@ -1,0 +1,50 @@
+[
+    {
+        "pName": "手机",
+        "pId": "1",
+        "children": [
+            {
+                "cName": "iphone",
+                "cId":"11"
+            },{
+                "cName": "iphone",
+                "cId":"11"
+            },{
+                "cName": "iphone",
+                "cId":"11"
+            }
+        ]
+    },
+    {
+        "pName": "手机",
+        "pId": "1",
+        "children": [
+            {
+                "cName": "iphone1",
+                "cId":"11"
+            },{
+                "cName": "iphone1",
+                "cId":"11"
+            },{
+                "cName": "iphone1",
+                "cId":"11"
+            }
+        ]
+    },
+    {
+        "pName": "手机",
+        "pId": "1",
+        "children": [
+            {
+                "cName": "iphone2",
+                "cId":"11"
+            },{
+                "cName": "iphone2",
+                "cId":"11"
+            },{
+                "cName": "iphone2",
+                "cId":"11"
+            }
+        ]
+    }
+]

@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>经销存管理系统</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="browsermode" content="application" />
+    <meta name="x5-page-mode" content="app" />
+    <link rel="stylesheet" href="http://css.40017.cn/touch/public/page/0.0.2/page.css">
+    <link rel="stylesheet" href="http://css.40017.cn/cn/min/??/touch/public/dialog/0.0.1/dialog.css">
+    <link rel="stylesheet" href="./lib/normalize.css">
+    <!-- <link rel="stylesheet" href="./lib/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="./lib/ripple.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <div id="menu" class="slideout-menu">
+        <div class="side-nav-wrapper">
+            <span id="logo">功能列表</span>
+            <div class="nav">
+                <dl>
+                    <dt class="open js-ripple-btn">进货管理</dt>
+                    <div>
+                        <dd>
+                            <span class="js-ripple-btn js-main-list" data-rel="1">登记入库</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="2">登记移库</span>
+                        </dd>
+                    </div>
+                    <dt class="open js-ripple-btn">货品加工</dt>
+                    <div>
+                        <dd>
+                            <span class="js-ripple-btn js-main-list" data-rel="3">单品加工</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="4">多品加工</span>
+                        </dd>
+                    </div>
+                    <dt class="js-ripple-btn">数据管理</dt>
+                    <div>
+                        <dd>
+                            <span class="js-ripple-btn js-main-list" data-rel="5">货品管理</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="6">仓库管理</span>
+                        </dd>
+                    </div>
+                    <dt class="js-ripple-btn">销售管理</dt>
+                    <div>
+                        <dd>
+                            <span class="js-ripple-btn js-main-list" data-rel="7">货品上架</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="8">货品下架</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="9">销售记入</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="10">销售统计</span>
+                        </dd>
+                    </div>
+                    <dt class="js-ripple-btn">退货管理</dt>
+                    <div>
+                        <dd>
+                            <span class="js-ripple-btn js-main-list" data-rel="11">登记退货</span>
+                        </dd>
+                    </div>
+                    <dt class="js-ripple-btn">账户管理</dt>
+                    <div>
+                        <dd>
+                            <span class="js-ripple-btn js-main-list" data-rel="12">进账管理</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="13">出账管理</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="14">欠账管理</span>
+                            <span class="js-ripple-btn js-main-list" data-rel="15">金额账管理</span>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div id="mainPage">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <button class="btn-hamburger js-slideout-toggle">
+                    <!-- <span class="tooltip shake">侧滑选择操作列表</span> -->
+                </button>
+                <span class="title"><strong class="level1">进销存管系统</strong>-<strong class="level2 js-level-subitle">进货管理</strong></span>
+            </div>
+        </div>
+        <div class="" id="panel-box">
+            <div id="new1_1Page" class="block1 block js-block active" data-rel="1">
+                <ul>
+                    <li class="input0">
+                        <label>* 货品品类</label>
+                        <span data-id="1">待选择</span><i class="enter-icon"></i></li>
+                    </li>
+                    <li class="input1">
+                        <label>* 仓库</label>
+                        <span data-id="1">待选择</span><i class="enter-icon"></i></li>
+                    </li>
+                    <li class="input2">
+                        <label>* 供应商</label>
+                        <span data-id="1">待选择</span><i class="enter-icon"></i></li>
+                    <li class="input3">
+                        <label>* 进货量&价</label>
+                        <span data-id="1">待填写</span><i class="enter-icon"></i></li>
+                    </li>
+                    <li class="input4">
+                        <label>* 货品名称</label>
+                        <span data-id="1">待选择</span><i class="enter-icon"></i></li>
+                    </li>
+                    <li class="input5">
+                        <label>* 货品等级</label>
+                        <span class="active" data-id="1"><span  class="iradio active"><i></i><span>大床房</span></span>
+                        </span>
+                        <i class="enter-icon"></i>
+                    </li>
+                    <li class="input6">
+                        <label>&nbsp;&nbsp;备注</label>
+                        <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                        <input type="text" placeholder="请输入备注">
+                    </li>
+                </ul>
+                <div class="newVistor_btn">
+                    <a class="js-ripple-btn js-submit-btn" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+            <div id="new2_1Page" class="block2 block js-block" data-rel="2">
+                <ul>
+                    <li class="input0">
+                        <label>* 选择出库</label>
+                        <!-- <input type="text" placeholder="请输入备注"> -->
+                        <select name="" id="" value="1">
+                            <option value="choose">请选择出库名称</option>
+                            <option value="2">北京仓库</option>
+                            <option value="3">南京仓库</option>
+                            <option value="4">上海仓库</option>
+                            <option value="5">杭州仓库</option>
+                        </select>
+                    </li>
+                    <li class="input1">
+                        <label>* 选择货品</label>
+                        <select name="" id="" value="1">
+                            <option value="choose">请选择货品名称</option>
+                            <option value="1">iphone</option>
+                            <option value="2">电脑1</option>
+                            <option value="3">电脑2</option>
+                            <option value="4">电脑3</option>
+                            <option value="5">电脑4</option>
+                        </select>
+                    </li>
+                    <li class="input5">
+                        <label>* 度量单位</label>
+                        <select name="" id="" value="1">
+                            <option value="choose">请选择货品单位</option>
+                            <option value="1">iphone</option>
+                            <option value="2">电脑1</option>
+                            <option value="3">电脑2</option>
+                            <option value="4">电脑3</option>
+                            <option value="5">电脑4</option>
+                        </select>
+                    </li>
+                    <li class="input2">
+                        <label>* 出库数量</label>
+                        <input type="text" placeholder="请输入备注">
+                        <li class="input4">
+                            <label>* 选择入库</label>
+                            <select name="" id="" value="1">
+                                <option value="choose">请选择货品单位</option>
+                                <option value="1">iphone</option>
+                                <option value="2">电脑1</option>
+                                <option value="3">电脑2</option>
+                                <option value="4">电脑3</option>
+                                <option value="5">电脑4</option>
+                            </select>
+                        </li>
+                        <li class="input6">
+                            <label>&nbsp;&nbsp;备注</label>
+                            <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                            <input type="text" placeholder="请输入备注">
+                        </li>
+                </ul>
+                <div class="newVistor_btn">
+                    <a class="js-ripple-btn" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+            <div id="new3_1Page" class="block3 block js-block" data-rel="3">
+                <ul>
+                    <li class="input0">
+                        <label>* 加工货品</label>
+                        <!-- <input type="text" placeholder="请输入备注"> -->
+                        <select name="" id="" value="1">
+                            <option value="choose">请选择货品名称</option>
+                            <option value="2">玉米</option>
+                            <option value="3">土豆</option>
+                            <option value="4">上海仓库</option>
+                            <option value="5">杭州仓库</option>
+                        </select>
+                    </li>
+                    <li class="input5">
+                        <label>* 度量单位</label>
+                        <select name="" id="" value="1">
+                            <option value="choose">请选择货品单位</option>
+                            <option value="1">iphone</option>
+                            <option value="2">电脑1</option>
+                            <option value="3">电脑2</option>
+                            <option value="4">电脑3</option>
+                            <option value="5">电脑4</option>
+                        </select>
+                    </li>
+                    <li class="input2">
+                        <label>* 加工数量</label>
+                        <input type="text" placeholder="请输入加工数量">
+                    </li>
+                    <li class="input3">
+                        <label>* 加工辅料</label>
+                        <span data-id="1">待选择</span><i class="enter-icon"></i>
+                    </li>
+                    <li class="input4">
+                        <label>* 加工后品类</label>
+                        <input type="text" value="原品类">
+                    </li>
+                    <li class="input6">
+                        <label>&nbsp;&nbsp;加工后仓库</label>
+                        <select name="" id="" value="2">
+                            <option value="choose">请选择货品单位</option>
+                            <option value="1">iphone</option>
+                            <option value="2">电脑1</option>
+                            <option value="3">电脑2</option>
+                            <option value="4">电脑3</option>
+                            <option value="5">电脑4</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="newVistor_btn">
+                    <a class="js-ripple-btn" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+            <div id="new4_1Page" class="block4 block js-block" data-rel="4">
+                <dl>
+                    <dt class="input0 have-show">
+                        <label>* 加工货品</label>
+                        <!-- <input type="text" placeholder="请输入备注"> -->
+                        <span data-id="1">待选择</span><i class="enter-icon"></i>
+                    </dt>
+                    <dd class="js-input0-show input-show">
+                        <div class="input-show-list"><span>货品1 * 12件</span></div>
+                        <div class="input-show-list"><span>货品1 * 12件</span></div>
+                    </dd>
+                    <dt class="input3 have-show">
+                        <label>* 加工辅料</label>
+                        <span data-id="1">待选择</span><i class="enter-icon"></i>
+                    </dt>
+                    <dd class="js-input3-show input-show">
+                        <div class="input-show-list"><span>货品1 成本价 12元</span></div>
+                        <div class="input-show-list"><span>货品1 成本价 12元</span></div>
+                    </dd>
+                    <dt class="input4">
+                        <label>* 加工后品类</label>
+                        <input type="text" value="原品类">
+                    </dt>
+                    <dt class="input6">
+                        <label>&nbsp;&nbsp;加工后仓库</label>
+                        <select name="" id="" value="2">
+                            <option value="choose">请选择货品单位</option>
+                            <option value="1">iphone</option>
+                            <option value="2">电脑1</option>
+                            <option value="3">电脑2</option>
+                            <option value="4">电脑3</option>
+                            <option value="5">电脑4</option>
+                        </select>
+                    </dt>
+                    <!-- <li class="input5">
+                        <label>* 度量单位</label>
+                        <select name="" id="" value="1">
+                            <option value="choose">请选择货品单位</option>
+                            <option value="1">iphone</option>
+                            <option value="2">电脑1</option>
+                            <option value="3">电脑2</option>
+                            <option value="4">电脑3</option>
+                            <option value="5">电脑4</option>
+                        </select>
+                    </li>
+                    <li class="input2">
+                        <label>* 加工数量</label>
+                        <input type="text" placeholder="请输入加工数量">
+                    </li> -->
+                </dl>
+                <div class="newVistor_btn">
+                    <a class="js-ripple-btn" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+            <div id="new5_1Page" class="block5 block js-block" data-rel="5">
+                <div class="v-title v-rate">
+                    <p class="J_Rate v-progress">
+                        <em></em>搜索条件<span class="d_cion"></span>
+                    </p>
+                    <div class="search-box">
+                                <div class="search-name">
+                                    <span class="key">货品名称</span><span class="value"><input type="text" placeholder="输入货品名称"></span>
+                                </div>
+                                <div class="search-stype">
+                                    <span class="key">货品品类</span><span class="value"><input type="text" placeholder="输入货品品类"></span>
+                                </div>
+                                <div class="search-store">
+                                    <span class="key">仓库名称</span><span class="value"><input type="text" placeholder="输入仓库名称"></span>
+                                </div>
+                                <div class="search-sale">
+                                    <span class="key">是否在售</span>
+                                    <span class="value">
+                                        <select name="" id="">
+                                            <option value="1">全部</option>
+                                            <option value="1">在售</option>
+                                            <option value="1">未售</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="search-btn"><span>搜索</span></div>
+                            </div>
+                </div>
+                <section class="pro-list">
+                    <div class="pro-tab">
+                        <div class="v-title">
+                            <p><em></em>搜索列表</p>
+
+                        </div>
+                    </div>
+                    <div class="list-area J_ListArea list-view">
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="title"><span class="main-title">北京仓库 - 手机 - iphone</span></div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>货品编号：</strong><em>1</em><strong>添加时间：</strong><em>2016-15-07</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>最近进货时间：</strong><em>2016-15-07</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>总数：</strong><em>20<i>件</i></em>
+                                            <strong>现存数量：</strong><em>20<i>件</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>已售数量：</strong><em>20<i>件</i></em>
+                                            <strong>在售数量：</strong><em>20<i>件</i></em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="title"><span class="main-title">北京仓库 - 手机 - iphone</span></div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>货品编号：</strong><em>1</em><strong>添加时间：</strong><em>2016-15-07</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>最近进货时间：</strong><em>2016-15-07</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>总数：</strong><em>20<i>件</i></em>
+                                            <strong>现存数量：</strong><em>20<i>件</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>已售数量：</strong><em>20<i>件</i></em>
+                                            <strong>在售数量：</strong><em>20<i>件</i></em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="new6_1Page" class="block6 block js-block" data-rel="6">
+                <div class="v-title v-rate">
+                    <p class="J_Rate v-progress">
+                        <em></em>搜索条件<span class="d_cion"></span>
+                    </p>
+                    <div class="search-box">
+                                <div class="search-name">
+                                    <span class="key">仓库名称</span><span class="value"><input type="text" placeholder="输入仓库名称"></span>
+                                </div>
+                                <div class="search-btn"><span>搜索</span></div>
+                            </div>
+                </div>
+                <section class="pro-list">
+                    <div class="pro-tab">
+                        <div class="v-title">
+                            <p><em></em>搜索列表</p>
+
+                        </div>
+                    </div>
+                    <div class="list-area J_ListArea list-view">
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="title"><span class="main-title">北京仓库</span></div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>仓库编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>所属地区：</strong><em>北京-朝阳-长楹天街</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>仓库大小：</strong><em>200<i>平方米</i></em>
+                                            <strong>已用空间：</strong><em>100<i>平方米</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>仓库租金：</strong><em>200<i>元/年</i></em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="title"><span class="main-title">北京仓库</span></div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>仓库编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>所属地区：</strong><em>北京-朝阳-长楹天街</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>仓库大小：</strong><em>200<i>平方米</i></em>
+                                            <strong>已用空间：</strong><em>100<i>平方米</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>仓库租金：</strong><em>200<i>元/年</i></em>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="new7_1Page" class="block7 block js-block" data-rel="7">
+                <dl>
+                    <dt class="input0 have-show">
+                        <label>* 上架货品</label>
+                        <!-- <input type="text" placeholder="请输入备注"> -->
+                        <span data-id="1">待选择</span><i class="enter-icon"></i>
+                    </dt>
+                    <dd class="js-input0-show input-show">
+                        <div class="input-show-list"><span>货品1 * 12件 单价：12元</span></div>
+                        <div class="input-show-list"><span>货品1 * 12件 单价：12元</span></div>
+                    </dd>
+                </dl>
+                <div class="newVistor_btn">
+                    <a class="js-ripple-btn" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+            <div id="new8_1Page" class="block8 block js-block" data-rel="8">
+                <div class="v-title v-rate">
+                    <p class="J_Rate v-progress">
+                        <em></em>搜索条件<span class="d_cion"></span>
+                    </p>
+                    <div class="search-box">
+                                <div class="search-name">
+                                    <span class="key">货品名称</span><span class="value"><input type="text" placeholder="输入货品名称"></span>
+                                </div>
+                                <div class="search-stype">
+                                    <span class="key">货品品类</span><span class="value"><input type="text" placeholder="输入货品品类"></span>
+                                </div>
+                                <div class="search-store">
+                                    <span class="key">仓库名称</span><span class="value"><input type="text" placeholder="输入仓库名称"></span>
+                                </div>
+                                <div class="search-btn"><span>搜索</span></div>
+                            </div>
+                </div>
+                <section class="pro-list">
+                    <div class="pro-tab">
+                        <div class="v-title">
+                            <p><em></em>搜索列表</p>
+
+                        </div>
+                    </div>
+                    <div class="list-area J_ListArea list-view">
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="title"><span class="main-title">北京仓库 - 手机 - iphone7</span></div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>仓库编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>上架时间：</strong><em>2016-17-8</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>销售单价：</strong><em>12 <i>元</i></em><strong>已售数量：</strong><em>200<i>元/年</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>剩余数量：</strong><em>200<i>元/年</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-btn">
+                                        <span>下架</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="title"><span class="main-title">北京仓库 - 手机 - iphone7</span></div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>仓库编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>上架时间：</strong><em>2016-17-8</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>销售单价：</strong><em>12 <i>元</i></em><strong>已售数量：</strong><em>200<i>元/年</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>剩余数量：</strong><em>200<i>元/年</i></em>
+                                        </span>
+                                    </div>
+                                    <div class="new-btn">
+                                        <span>下架</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="new9_1Page" class="block9 block js-block" data-rel="9">
+                <ul>
+                    <li class="input0">
+                        <label>* 销售货品</label>
+                        <span data-id="1">待选择</span><i class="enter-icon"></i></li>
+                    </li>
+                    <li class="input3">
+                        <label>* 销售量&价</label>
+                        <span data-id="1">待填写</span><i class="enter-icon"></i></li>
+                    </li>
+                    <li class="input5">
+                        <label>* 是否结清</label>
+                        <span class="active" data-id="1">
+                            <span  class="iradio active"><i></i><span>是</span></span>
+                            <span  class="iradio"><i></i><span>否</span></span>
+                        </span>
+                        <i class="enter-icon"></i>
+                    </li>
+                    <li class="input6">
+                        <label>* 顾客姓名</label>
+                        <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                        <input type="text" placeholder="请输入顾客姓名">
+                    </li>
+                    <li class="input7">
+                        <label>* 顾客电话</label>
+                        <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                        <input type="text" placeholder="请输入顾客电话">
+                    </li>
+                    <li class="input8">
+                        <label>* 顾客电话</label>
+                        <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                        <input type="text" placeholder="请输入顾客地址">
+                    </li>
+                </ul>
+                <div class="newVistor_btn">
+                    <a class="js-ripple-btn" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+            <div id="new10_1Page" class="block10 block js-block" data-rel="10">
+                <!-- 图标 -->
+                <div id="echartSaleMain"></div>
+            </div>
+            <div id="new11_1Page" class="block11 block js-block" data-rel="11">
+                <ul>
+                    <li class="input0">
+                        <label>* 退货货品</label>
+                        <input type="text" placeholder="请输入顾客姓名">
+                    </li>
+                    <li class="input3">
+                        <label>* 退货量&价</label>
+                        <span data-id="1">待填写</span><i class="enter-icon"></i></li>
+                    </li>
+                    <li class="input5">
+                        <label>* 是否结清</label>
+                        <span class="active" data-id="1">
+                            <span  class="iradio active"><i></i><span>是</span></span>
+                            <span  class="iradio"><i></i><span>否</span></span>
+                        </span>
+                        <i class="enter-icon"></i>
+                    </li>
+                    <li class="input6">
+                        <label>* 顾客姓名</label>
+                        <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                        <input type="text" placeholder="请输入顾客姓名">
+                    </li>
+                    <li class="input7">
+                        <label>* 顾客电话</label>
+                        <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                        <input type="text" placeholder="请输入顾客电话">
+                    </li>
+                    <li class="input8">
+                        <label>* 顾客电话</label>
+                        <!-- <span class="active" data-id="1">待填写</span>
+                        <i class="enter-icon"></i> -->
+                        <input type="text" placeholder="请输入顾客地址">
+                    </li>
+                </ul>
+                <div class="newVistor_btn">
+                    <a class="js-ripple-btn" href="javascript:void(0);">确定</a>
+                </div>
+            </div>
+            <div id="new12_1Page" class="block12 block js-block" data-rel="12">
+                <div class="v-title v-rate">
+                    <p class="J_Rate v-progress">
+                        <em></em>搜索条件<span class="d_cion"></span>
+                    </p>
+                    <div class="search-box">
+                                <div class="search-name">
+                                    <span class="key">货品名称</span><span class="value"><input type="text" placeholder="输入货品名称"></span>
+                                </div>
+                                <div class="search-type">
+                                    <span class="key">货品品类</span><span class="value"><input type="text" placeholder="输入货品品类"></span>
+                                </div>
+                                <div class="search-intime">
+                                    <span class="key">进账日期</span>
+                                    <span class="value">
+                                        <input type="date" placeholder="选择时间"><em>至</em>
+                                        <input type="date" placeholder="选择时间">
+                                        </span>
+                                </div>
+                                
+                                <div class="search-btn"><span>搜索</span></div>
+                            </div>
+                </div>
+                <section class="pro-list">
+                    <div class="pro-tab">
+                        <div class="v-title">
+                            <p><em></em>搜索列表</p>
+
+                        </div>
+                    </div>
+                    <div class="list-area J_ListArea list-view">
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="new-price">
+                                        <span class="time"><strong>进账编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>销售货品：</strong><em>iphone7</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>进账金额：</strong><em>20元</em>
+                                            <strong>进账日期：</strong><em>2015-07-18</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>是否结清：</strong><em>否</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-btn">
+                                        <span>详情&修改</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="new-price">
+                                        <span class="time"><strong>进账编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>销售货品：</strong><em>iphone7</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>进账金额：</strong><em>20元</em>
+                                            <strong>进账日期：</strong><em>2015-07-18</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>是否结清：</strong><em>否</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-btn">
+                                        <span>详情&修改</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="new13_1Page" class="block13 block js-block" data-rel="13">
+                <div class="v-title v-rate">
+                    <p class="J_Rate v-progress">
+                        <em></em>搜索条件<span class="d_cion"></span>
+                    </p>
+                    <div class="search-box">
+                                <div class="search-name">
+                                    <span class="key">货品名称</span><span class="value"><input type="text" placeholder="输入货品名称"></span>
+                                </div>
+                                <div class="search-type">
+                                    <span class="key">货品品类</span><span class="value"><input type="text" placeholder="输入货品品类"></span>
+                                </div>
+                                <div class="search-intime">
+                                    <span class="key">进账日期</span>
+                                    <span class="value">
+                                        <input type="date" placeholder="选择时间"><em>至</em>
+                                        <input type="date" placeholder="选择时间">
+                                        </span>
+                                </div>
+                                
+                                <div class="search-btn"><span>搜索</span></div>
+                            </div>
+                </div>
+                <section class="pro-list">
+                    <div class="pro-tab">
+                        <div class="v-title">
+                            <p><em></em>搜索列表</p>
+
+                        </div>
+                    </div>
+                    <div class="list-area J_ListArea list-view">
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="new-price">
+                                        <span class="time"><strong>出账编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>销售货品：</strong><em>iphone7</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>出账金额：</strong><em>20元</em>
+                                            <strong>出账日期：</strong><em>2015-07-18</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>是否结清：</strong><em>否</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-btn">
+                                        <span>详情&修改</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="new-price">
+                                        <span class="time"><strong>进账编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>销售货品：</strong><em>iphone7</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>进账金额：</strong><em>20元</em>
+                                            <strong>进账日期：</strong><em>2015-07-18</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>是否结清：</strong><em>否</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-btn">
+                                        <span>详情&修改</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="new14_1Page" class="block14 block js-block" data-rel="14">
+                <div class="v-title v-rate">
+                    <p class="J_Rate v-progress">
+                        <em></em>搜索条件<span class="d_cion"></span>
+                    </p>
+                    <div class="search-box">
+                                <div class="search-name">
+                                    <span class="key">货品名称</span><span class="value"><input type="text" placeholder="输入货品名称"></span>
+                                </div>
+                                <div class="search-type">
+                                    <span class="key">货品品类</span><span class="value"><input type="text" placeholder="输入货品品类"></span>
+                                </div>
+                                <div class="search-customer">
+                                    <span class="key">顾客姓名</span><span class="value"><input type="text" placeholder="输入顾客姓名"></span>
+                                </div>
+                                <div class="search-phone">
+                                    <span class="key">顾客电话</span><span class="value"><input type="text" placeholder="输入顾客电话"></span>
+                                </div>
+                                <div class="search-intime">
+                                    <span class="key">进账日期</span>
+                                    <span class="value">
+                                        <input type="date" placeholder="选择时间"><em>至</em>
+                                        <input type="date" placeholder="选择时间">
+                                        </span>
+                                </div>
+                                
+                                <div class="search-btn"><span>搜索</span></div>
+                            </div>
+                </div>
+                <section class="pro-list">
+                    <div class="pro-tab">
+                        <div class="v-title">
+                            <p><em></em>搜索列表</p>
+
+                        </div>
+                    </div>
+                    <div class="list-area J_ListArea list-view">
+                        <div class="auction">
+                            <div class="main-pic">
+                                <div class="describe">
+                                    <div class="new-price">
+                                        <span class="time"><strong>欠账编号：</strong><em>1</em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time"><strong>欠账金额：</strong><em>20 <i>元</i></em></span>
+                                        <span class="time"><strong>已清金额：</strong><em>20 <i>元</i></em></span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>剩余欠款金额：</strong><em>20元</em>
+                                            <strong>欠账日期：</strong><em>2015-07-18</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>对应货品：</strong><em>iphone</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>欠账人：</strong><em>iphone</em>
+                                            <strong>手机号：</strong><em>18392622932</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>地址：</strong><em>长乐街</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-price">
+                                        <span class="time">
+                                            <strong>是否结清：</strong><em>否</em>
+                                        </span>
+                                    </div>
+                                    <div class="new-change-btn">
+                                        <span class="detail-btn">详情&修改</span>
+                                        <span class="cancel-btn">清账</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div id="new15_1Page" class="block15 block js-block" data-rel="15">
+                <!-- <div class="v-title v-rate">
+                    <p class="J_Rate v-progress">
+                        <em></em>图标类型选择<span class="d_cion"></span>
+                    </p>
+                    <div class="search-box">
+                        <div class="search-name">
+                            <span class="key">选择</span>
+                            <span class="value">
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="search-btn"><span>搜索</span></div>
+                    </div>
+                </div> -->
+                <!-- 图标 -->
+                <div id="moneyMainEchart"></div>
+            </div>
+        </div>
+    </div>
+    <div class="category-choose page clearfix " id="categoryPage">
+        <div class="list-box">
+            <div class="left" id="l-wrapper">
+                <ul>
+                    <li data-id="1" data-bind="">热门品类</li>
+                    <li class="active" data-id="2">水果</li>
+                    <li data-id="3">手机</li>
+                </ul>
+            </div>
+            <div class="right" id="r-wrapper" data-pid="1">
+                <ul>
+                    <li data-id="1" data-value=""><span></span>iphone</li>
+                    <li data-id="2" data-value="">香蕉</li>
+                    <li data-id="3" data-value="">联想</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                    <li data-id="2" data-value="">苹果</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="store-create page" id="storecreatePage">
+        <div class="top_title">
+            <h1>仓库列表<i></i><em></em></h1>
+        </div>
+        <div class="addstore">
+            <div class="add-select">
+                <div class="storename">
+                    <span class="key">* 仓库名称</span>
+                    <div class="value">
+                        <input type="text" placeholder="仓库名称">
+                    </div>
+                </div>
+                <div class="area">
+                    <span class="key">* 仓库地址</span>
+                    <div class="value">
+                        <div class="select-box">
+                            <select id="myPro"></select><strong>省</strong>
+                        </div>
+                        <div class="select-box">
+                            <select id="myCity"></select><strong>市</strong>
+                        </div>
+                        <div class="select-box">
+                            <select id="myLoc"></select><strong>区</strong>
+                        </div>
+                        <div class="select-box detali">
+                            <input id="adressdetail" type="text" placeholder="详细地址">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn"><span class="addnew">创建仓库</span> </div>
+        </div>
+        <div class="latest">
+            <!-- 指在没有刷新页面的情况下添加了 -->
+            <div class="title"><span>最近新增</span></div>
+            <div class="latest-list"><em>没有新增仓库~</em></div>
+        </div>
+        <div class="all-list">
+            <ul>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+            </ul>
+        </div>
+        <!-- <div class="action">
+            <a>返回</a>
+        </div> -->
+    </div>
+    <div class="supper-create page" id="supercreatePage">
+        <div class="top_title">
+            <h1>仓库列表<i></i><em></em></h1>
+        </div>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>姓名</span>
+                    <input type="text" placeholder="输入供应商姓名">
+                </label>
+                <label class="epxress_id"><span>地址</span>
+                    <input type="text" placeholder="请输入供应商地址">
+                </label>
+                <label class="tips"><span>备注</span>
+                    <input type="text" placeholder="输入备注信息">
+                </label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">新增供应商</submit>
+            </div>
+        </form>
+        <div class="latest">
+            <!-- 指在没有刷新页面的情况下添加了 -->
+            <div class="title"><span>最近新增</span></div>
+            <div class="latest-list"><span>仓库a</span><span>仓库b乱七八糟</span></div>
+        </div>
+        <div class="all-list">
+            <ul>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+            </ul>
+        </div>
+    </div>
+    <div class="amount-price page" id="amountpricePage">
+        <div class="top_title">
+            <h1>仓库列表<i></i><em></em></h1>
+        </div>
+        <ul>
+            <li class="unit">
+                <label>度量单位</label>
+                <span>
+                    <select value="0">
+                        <option value="0">请选择</options>
+                        <option value="件">件</options>
+                        <option value="箱">箱</options>
+                        <option value="个">个</options>
+                        <option value="斤">斤</options>
+                    </select>
+                </span>
+            </li>
+            <li class="count">
+                <label>进货数量</label>
+                <span><input type="number" placeholder="请输入货品数量"></span>
+            </li>
+            <li class="price">
+                <label>进货单价</label>
+                <span><input type="number" placeholder="请输入货品的单价" value=""><strong>元</strong></span>
+            </li>
+            <li class="allprice">
+                <label>进货总价</label>
+                <span><input type="number" placeholder="请输入货品的单价" value=""><strong>元</strong></span>
+            </li>
+        </ul>
+        <div class="newVistor_btn">
+            <a href="javascript:void(0);">确定</a>
+        </div>
+    </div>
+    <div class="goods-create page" id="goodscreatePage">
+        <div class="top_title">
+            <h1>货品列表<i></i><em></em></h1>
+        </div>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>名称</span>
+                    <input type="text" placeholder="输入货品名称">
+                </label>
+                <label class="epxress_id"><span>属性</span>
+                    <input type="text" placeholder="请输入属性">
+                </label>
+                <label class="tips"><span>备注</span>
+                    <input type="text" placeholder="输入备注信息">
+                </label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">新增货品</submit>
+            </div>
+        </form>
+        <div class="latest">
+            <!-- 指在没有刷新页面的情况下添加了 -->
+            <div class="title"><span>最近新增</span></div>
+            <div class="latest-list"><span>仓库a</span><span>仓库b乱七八糟</span></div>
+        </div>
+        <div class="all-list">
+            <ul>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+            </ul>
+        </div>
+    </div>
+    <div class="level-create page" id="levelcreatePage">
+        <div class="top_title">
+            <h1>等级列表<i></i><em></em></h1>
+        </div>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>名称</span>
+                    <input type="text" placeholder="输入品级名称">
+                </label>
+                <label class="epxress_id"><span>属性</span>
+                    <input type="text" placeholder="请输入属性">
+                </label>
+                <label class="tips"><span>备注</span>
+                    <input type="text" placeholder="输入备注信息">
+                </label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">新增品级</submit>
+            </div>
+        </form>
+        <div class="latest">
+            <!-- 指在没有刷新页面的情况下添加了 -->
+            <div class="title"><span>最近新增</span></div>
+            <div class="latest-list"><span>仓库a</span><span>仓库b乱七八糟</span></div>
+        </div>
+        <div class="all-list">
+            <ul>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+            </ul>
+        </div>
+    </div>
+    <div class="access-create page" id="accesscreatePage">
+        <div class="top_title">
+            <h1>辅料列表<i></i><em></em></h1>
+        </div>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>名称</span>
+                    <input type="text" placeholder="输入品级名称">
+                </label>
+                <label class="epxress_id"><span>成本价</span>
+                    <input type="text" placeholder="请输入成本价">
+                </label>
+                <label class="tips"><span>备注</span>
+                    <input type="text" placeholder="输入备注信息">
+                </label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">新增品级</submit>
+            </div>
+        </form>
+        <div class="latest">
+            <!-- 指在没有刷新页面的情况下添加了 -->
+            <div class="title"><span>最近新增</span></div>
+            <div class="latest-list"><span>仓库a</span><span>仓库b乱七八糟</span></div>
+        </div>
+        <div class="all-list">
+            <ul>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+                <li>仓库a</li>
+            </ul>
+        </div>
+        <div class="action"><a>确定选择</a></div>
+    </div>
+    <div class="goods-all page" id="goodsallPage">
+        <div class="top_title">
+            <h1>辅料列表<i></i><em></em></h1>
+        </div>
+        <div class="latest">
+            <!-- 指在没有刷新页面的情况下添加了 -->
+            <div class="title"><span>最近新增</span></div>
+            <div class="latest-list"><span>仓库a</span><span>仓库b乱七八糟</span></div>
+        </div>
+        <div class="all-list">
+            <dl>
+                <dt>货品名称</dt>
+                <dd>
+                    <div class="num-input">
+                        <span class="key">加工数量</span>
+                        <span class="value"><input type="text" placeholder="指定加工数量"><span class="util">千克</span></span>
+                    </div>
+                    <div class="btn"><span>选择</span></div>
+                </dd>
+                <dt>货品名称</dt>
+                <dd>
+                    <div class="num-input">
+                        <span class="key">加工数量</span>
+                        <span class="value"><input type="text" placeholder="指定加工数量"><span class="util">千克</span></span>
+                    </div>
+                    <div class="btn"><span>选择</span></div>
+                </dd>
+            </dl>
+        </div>
+        <div class="action"><a>确定选择</a></div>
+    </div>
+    <div class="good-detail page" id="gooddetailPage">
+        <div class="top_title">
+            <h1>货品详情<i></i><em></em></h1>
+        </div>
+        <h1 class="title">货品详细信息</h1>
+        <div class="middle-info">
+            <div>
+                <span class="key">货品编号：</span><div><span>123</span></div>
+            </div>
+            <div>
+                <span class="key">货品名称：</span>
+                <div><span>iphone</span>
+                    <!-- <span class="other-info">使馆受理时间会因为个人资料情况而有差异，具体以使馆为准。</span> -->
+                </div>
+            </div>
+            <div>
+                <span class="key">所属仓库：</span><div><span>北京仓库</span></div>
+            </div>
+            <div>
+                <span class="key">添加时间：</span><div><span>2016-07-18</span></div>
+            </div>
+            <div>
+                <span class="key">最近进货：</span><div><span>2017-8-21</span></div>
+            </div>
+            <div>
+                <span class="key">总数量：</span><div><span>20 <i>件</i></span></div>
+            </div>
+            <div>
+                <span class="key">现存数量：</span><div><span>20 <i>件</i></span></div>
+            </div>
+            <div>
+                <span class="key">已售数量：</span><div><span>20 <i>件</i></span></div>
+            </div>
+            <div>
+                <span class="key">在售数量：</span><div><span>20 <i>件</i></span></div>
+            </div>
+        </div>
+        <h1 class="title">编辑、修改信息</h1>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>货品名称</span><input type="text" placeholder="输入货品名称"></label>
+                <label class="epxress_id"><span>货品品类</span><input type="text" placeholder="输入货品品类"></label>
+                <label class="tips"><span>所属仓库</span><input type="text" placeholder="输入仓库名称"></label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">保存</submit>
+            </div>
+        </form>
+    </div>
+    <div class="store-detail page" id="storedetailPage">
+        <div class="top_title">
+            <h1>仓库详情<i></i><em></em></h1>
+        </div>
+        <h1 class="title">仓库详细信息</h1>
+        <div class="middle-info">
+            <div>
+                <span class="key">仓库编号：</span><div><span>123</span></div>
+            </div>
+            <div>
+                <span class="key">仓库名称：</span>
+                <div><span>iphone</span>
+                    <!-- <span class="other-info">使馆受理时间会因为个人资料情况而有差异，具体以使馆为准。</span> -->
+                </div>
+            </div>
+            <div>
+                <span class="key">已用空间：</span><div><span>北京仓库</span></div>
+            </div>
+            <div>
+                <span class="key">空闲空间：</span><div><span>2016-07-18</span></div>
+            </div>
+            <div>
+                <span class="key">仓库租金：</span><div><span>2017-8-21</span></div>
+            </div>
+        </div>
+        <h1 class="title">编辑、修改信息</h1>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>仓库名称</span><input type="text" placeholder="输入货品名称"></label>
+                <label class="epxress_id"><span>仓库大小</span><input type="text" placeholder="输入货品品类"></label>
+                <label class="tips"><span>所属地区</span><input type="text" placeholder="输入仓库名称"></label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">保存</submit>
+            </div>
+        </form>
+    </div>
+    <div class="goods-online page" id="goodsonlinePage">
+        <div class="top_title">
+            <h1>辅料列表<i></i><em></em></h1>
+        </div>
+        <div class="latest">
+            <!-- 指在没有刷新页面的情况下添加了 -->
+            <div class="title"><span>已选货品</span></div>
+            <div class="latest-list"><span>仓库a</span><span>仓库b乱七八糟</span></div>
+        </div>
+        <div class="all-list">
+            <dl>
+                <dt>货品名称</dt>
+                <dd>
+                    <div class="input num-input">
+                        <span class="key">加工数量</span>
+                        <span class="value"><input type="text" placeholder="指定加工数量"><span class="util">千克</span></span>
+                    </div>
+                     <div class="input price-input">
+                        <span class="key">销售单价</span>
+                        <span class="value"><input type="text" placeholder="指定加工数量"><span class="util">千克</span></span>
+                    </div>
+                    <div class="btn"><span>选择</span></div>
+                </dd>
+                <dt>货品名称</dt>
+                <dd>
+                    <div class="input num-input">
+                        <span class="key">加工数量</span>
+                        <span class="value"><input type="text" placeholder="指定加工数量"><span class="util">千克</span></span>
+                    </div>
+                     <div class="input price-input">
+                        <span class="key">销售单价</span>
+                        <span class="value"><input type="text" placeholder="指定加工数量"><span class="util">千克</span></span>
+                    </div>
+                    <div class="btn"><span>选择</span></div>
+                </dd>
+            </dl>
+        </div>
+        <div class="action"><a>确定选择</a></div>
+    </div>
+    <div class="inbill-detail page" id="inbilldetailPage">
+        <div class="top_title">
+            <h1>仓库详情<i></i><em></em></h1>
+        </div>
+        <h1 class="title">仓库详细信息</h1>
+        <div class="middle-info">
+            <div>
+                <span class="key">仓库编号：</span><div><span>123</span></div>
+            </div>
+            <div>
+                <span class="key">进账金额：</span>
+                <div><span>10元</span>
+                    <!-- <span class="other-info">使馆受理时间会因为个人资料情况而有差异，具体以使馆为准。</span> -->
+                </div>
+            </div>
+            <div>
+                <span class="key">销售货品：</span><div><span>iphone</span></div>
+            </div>
+            <div>
+                <span class="key">进账日期：</span><div><span>2016-07-18</span></div>
+            </div>
+            
+            <div>
+                <span class="key">是否结清：</span><div><span>是</span></div>
+            </div>
+        </div>
+        <h1 class="title">编辑、修改信息</h1>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>进账金额</span><input type="text" placeholder="输入进账金额"></label>
+                <label class="epxress_id"><span>销售货品</span><input type="text" placeholder="输入货品名称"></label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">保存</submit>
+            </div>
+        </form>
+    </div>
+    <div class="outbill-detail page" id="inbilldetailPage">
+        <div class="top_title">
+            <h1>仓库详情<i></i><em></em></h1>
+        </div>
+        <h1 class="title">出账详细信息</h1>
+        <div class="middle-info">
+            <div>
+                <span class="key">出账编号：</span><div><span>123</span></div>
+            </div>
+            <div>
+                <span class="key">出账金额：</span>
+                <div><span>10元</span>
+                    <!-- <span class="other-info">使馆受理时间会因为个人资料情况而有差异，具体以使馆为准。</span> -->
+                </div>
+            </div>
+            <div>
+                <span class="key">对应货品：</span><div><span>iphone</span></div>
+            </div>
+            <div>
+                <span class="key">出账日期：</span><div><span>2016-07-18</span></div>
+            </div>
+        </div>
+        <h1 class="title">编辑、修改信息</h1>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>出账金额</span><input type="text" placeholder="输入进账金额"></label>
+                <label class="epxress_id"><span>对应货品</span><input type="text" placeholder="输入货品名称"></label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">保存</submit>
+            </div>
+        </form>
+    </div>
+    <div class="debtbill-detail page" id="debtbilldetailPage">
+        <div class="top_title">
+            <h1>仓库详情<i></i><em></em></h1>
+        </div>
+        <h1 class="title">出账详细信息</h1>
+        <div class="middle-info">
+            <div>
+                <span class="key">出账编号：</span><div><span>123</span></div>
+            </div>
+            <div>
+                <span class="key">欠账金额：</span>
+                <div><span>10元</span>
+                    <!-- <span class="other-info">使馆受理时间会因为个人资料情况而有差异，具体以使馆为准。</span> -->
+                </div>
+            </div>
+            <div>
+                <span class="key">剩余欠款金额：</span><div><span>10元</span></div>
+            </div>
+            <div>
+                <span class="key">欠账日期：</span><div><span>2016-07-18</span></div>
+            </div>
+            <div>
+                <span class="key">对应货品：</span><div><span>iphone</span></div>
+            </div>
+            <div>
+                <span class="key">欠账人：</span><div><span>张三</span></div>
+            </div>
+            <div>
+                <span class="key">手机号：</span><div><span>13111111111</span></div>
+            </div>
+            <div>
+                <span class="key">地址：</span><div><span>丹霞路</span></div>
+            </div>
+            <div>
+                <span class="key">是否结清：</span><div><span>否</span></div>
+            </div>
+        </div>
+        <h1 class="title">编辑、修改信息</h1>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>欠账金额</span><input type="text" placeholder="修改欠账金额"></label>
+                <label class="epxress_id"><span>欠账人</span><input type="text" placeholder="修改顾客姓名"></label>
+                <label class="epxress_id"><span>手机号</span><input type="text" placeholder="修改顾客手机号"></label>
+                <label class="epxress_id"><span>地址</span><input type="text" placeholder="修改顾客地址"></label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">保存</submit>
+            </div>
+        </form>
+    </div>
+    <div class="cancelbill-detail page" id="debtbilldetailPage">
+        <div class="top_title">
+            <h1>仓库详情<i></i><em></em></h1>
+        </div>
+        <h1 class="title">出账详细信息</h1>
+        <div class="middle-info">
+            <div>
+                <span class="key">出账编号：</span><div><span>123</span></div>
+            </div>
+            <div>
+                <span class="key">欠账金额：</span>
+                <div><span>10元</span>
+                    <!-- <span class="other-info">使馆受理时间会因为个人资料情况而有差异，具体以使馆为准。</span> -->
+                </div>
+            </div>
+            <div>
+                <span class="key">剩余欠款金额：</span><div><span>10元</span></div>
+            </div>
+            <div>
+                <span class="key">欠账日期：</span><div><span>2016-07-18</span></div>
+            </div>
+            <div>
+                <span class="key">对应货品：</span><div><span>iphone</span></div>
+            </div>
+            <div>
+                <span class="key">欠账人：</span><div><span>张三</span></div>
+            </div>
+            <div>
+                <span class="key">手机号：</span><div><span>13111111111</span></div>
+            </div>
+            <div>
+                <span class="key">地址：</span><div><span>丹霞路</span></div>
+            </div>
+            <div>
+                <span class="key">是否结清：</span><div><span>否</span></div>
+            </div>
+        </div>
+        <h1 class="title">清除欠账信息</h1>
+        <form action="">
+            <div class="entry clearfix">
+                <label class="invioice_id"><span>清账金额</span><input type="text" placeholder="输入清除账目金额"></label>
+                <label class="epxress_id"><span>备注</span><input type="text" placeholder="输入备注信息"></label>
+            </div>
+            <div class="btn_group chearfix">
+                <submit class="save">保存</submit>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+var ajaxSet = {
+        getCategory: {
+            url: './source/getCategory.json',
+            type: 'get',
+            dataType: 'json'
+        }, //获取货品品类
+        getStore: {
+            url: './source/storelist.json',
+            type: 'get',
+            dataType: 'json'
+        }, //获取仓库列表
+        saveStore: {
+            url: './source/saveStore.json',
+            type: 'get',
+            dataType: 'json'
+        },
+        chartSale: {
+            url: './source/chartSale.json',
+            type: 'get',
+            dataType: 'json'
+        },
+        input_main1_save: {
+            url: './source/success.json',
+            type: 'get',
+            dataType: 'json'
+        }
+    }
+    /*document.getElementsByTagName('body')[0].addEventListener('touchstart', function(e) {e.preventDefault();}, false)*/
+</script>
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://js.40017.cn/cn/min/??/touch/public/page/0.0.2/page.js,/touch/public/dialog/0.0.1/dialog.js?v=2014110301"></script>
+
+<script src="./lib/jquery.browser.min.js"></script>
+<!-- <script src="./lib/bootstrap.min.js"></script> -->
+<script src="./lib/slideout.min.js"></script>
+<!-- <script src="./lib/material.min.js"></script> -->
+<script src="./lib/ripple.min.js"></script>
+<script src="./lib/jsAddress.js"></script>
+<script src="./lib/require.js" data-main="./js/index"></script>
+<!-- <script src="./js/index.js"></script> -->
+<script>
+</script>
+
+</html>
