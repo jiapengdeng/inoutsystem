@@ -34,7 +34,7 @@
                 this.eventBind();
             }
         },
-        eventBind(){
+        eventBind:function() {
             $(".block1 .input0").on("click",function(){
                 if(!this.hasClass("categoryActive")){
                     categoryPage.clear();
@@ -163,9 +163,61 @@
     /*登记移库*/
     var main2 = {
         init: function() {
-
+            this.eventInit();
+        },
+        eventInit: function() {
+            $(".js-block.block2 .js-submit-btn").on("click", function() {
+                var dataOptions = {
+                    outStore: $(".js-block.block2 .input0 select").val(),
+                    chooseGoods: $(".js-block.block2 .input1 select").val(),
+                    uint: $(".js-block.block2 .input5 select").val(),
+                    count: $(".js-block.block2 .input2 input").val(),
+                    inStore: $(".js-block.block2 .input4 select").val(),
+                    remark: $(".js-block.block2 .input6 input").val()
+                }
+                
+                if(dataOptions.outStore == "choose"){
+                    inputDialog.content("你没有正确选择出库信息，请确认选择后再提交！");
+                    inputDialog.open();
+                    return;
+                }
+                if(dataOptions.chooseGoods == "choose"){
+                    inputDialog.content("你没有正确选择货品信息，请确认选择后再提交！");
+                    inputDialog.open();
+                    return;
+                }
+                if(dataOptions.uint == "choose"){
+                    inputDialog.content("货品的度量单位必需选择，请确认选择后再提交！");
+                    inputDialog.open();
+                    return;
+                }
+                if(dataOptions.count == ""){
+                    inputDialog.content("货品的出库数量必需填写，请确认选择后再提交！");
+                    inputDialog.open();
+                    return;
+                }
+                if(dataOptions.count == "choose"){
+                    inputDialog.content("货品的入库信息必需确定，请确认选择后再提交！");
+                    inputDialog.open();
+                    return;
+                }
+                $.ajax({
+                    url: ajaxSet.input_main1_save.url,
+                    type: ajaxSet.input_main1_save.type,
+                    dataType: ajaxSet.input_main1_save.dataType,
+                    data: dataOptions,
+                    success:function(data) {
+                        if(data.Issuccess){
+                            inputDialog.content("你所提交的表单已经保存成功~");
+                        }else{
+                            inputDialog.content(data.Message);
+                        }
+                    }
+                })
+            })
         }
-    }
+    }g
+    
     var main3 = {
         init: function() {
             this.eventInit();
@@ -601,7 +653,7 @@
                         var index = parseInt($(this).data("index"));
                         var childrenData = that.categorySourceCache[index].children;
                         getRightHtml(childrenData,index);
-                            
+
                     })
                 },
                 error: function(err){
